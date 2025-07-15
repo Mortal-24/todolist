@@ -1,0 +1,104 @@
+/* Overall Layout */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+/* To-Do Container */
+.ToDO {
+    width: 350px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+.ToDO:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+}
+
+/* Input Field */
+.ToDO input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.ToDO input:focus {
+    border-color: #4CAF50;
+}
+
+/* Add Button */
+.ToDO button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.ToDO button:hover {
+    background-color: #45a049;
+}
+
+/* Task List */
+ul#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Task Items */
+ul#taskList li {
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+ul#taskList li:hover {
+    background: #f0f0f0;
+}
+ul#taskList li.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.delete-btn:hover {
+    background-color: #e60000;
+}
